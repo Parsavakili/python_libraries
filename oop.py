@@ -90,6 +90,31 @@ animal_sound(Dog("Buddy"))  # Output: "Woof!"
 # --------------------------
 # 4. Encapsulation
 # --------------------------
+class Person:
+    def __init__(self, name, age):
+        self.name = name  # Public attribute
+        self._age = age   # Protected attribute (convention, not enforced)
+        self.__id = 1234  # Private attribute (name mangling applied)
+
+    def display(self):
+        print(f"Name: {self.name}, Age: {self._age}, ID: {self.__id}")
+
+# Create an object of the Person class
+p = Person("Ali", 30)
+
+# Accessing public attribute
+print(p.name)  # Output: Ali (Accessing public attribute is allowed)
+
+# Accessing protected attribute (not recommended, but possible)
+print(p._age)  # Output: 30 (Accessing protected attribute is allowed, but it's a convention to avoid it)
+
+# Accessing private attribute (will cause an error)
+# print(p.__id)  # Error: AttributeError (Private attribute cannot be accessed directly)
+
+# Using a method to display all attributes
+p.display()  # Output: Name: Ali, Age: 30, ID: 1234
+
+
 class Circle:
     """Circle class to demonstrate encapsulation and properties."""
 
