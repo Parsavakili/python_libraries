@@ -26,7 +26,7 @@ my_dog.bark()  # Output: "Buddy says woof!"
 # 2. Special Methods (Dunder Methods)
 # --------------------------
 class Vector:
-    """A Vector class to demonstrate operator overloading using dunder methods."""
+    """A Vector class to demonstrate operator overloading using dunder (__method name__) methods."""
 
     def __init__(self, x, y):
         """Constructor to initialize x and y coordinates."""
